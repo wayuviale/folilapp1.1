@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>{% block title %}Folilapp{% endblock %}</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                background-image: url("{% static 'indexmaxxing.jpg' %}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .button-container {
+                position: absolute;
+                top: 72%;
+                left: 50%;
+                transform: translate(-50%, 60%);
+                text-align: center;
+                display: flex;
+            }
+            .button-container button {
+                width: 600px; /* Set the width of the button */
+                height: 70px; /* Set the height of the button */
+                padding: 10px 20px; /* Adjust padding */
+                font-size: 18px; /* Adjust font size */
+                font-size: 16px;
+                margin: 0px 10px;
+                cursor: pointer;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="button-container">
+                <a href="login.html">
+                    <button type="button">Button 1</button>
+                </a>
+                <!--<a href=""> -->
+                    <button type="button">Button 2</button>
+                <!-- </a> -->
+            </div>
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>
