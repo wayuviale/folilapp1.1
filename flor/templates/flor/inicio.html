@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOLILA!</title>
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+</head>
+<body>
+    <div class="inicio-container">
+        <a href="{% url 'inicio' %}" class="titulo">FOLILA</a>
+        <div class="iconos">
+            <img src="{% static 'images/logo.png' %}" alt="Icono 2">
+        </div>
+        <div class="botones">
+            <a href="{% url 'login' %}" class="boton boton-iniciar">Iniciar Sesión</a>
+            <a href="{% url 'register' %}" class="boton boton-registrarse">Registrarse</a>
+        </div>        
+        <p class="texto-descripcion">Descubre plantas que cuidan de ti y del medioambiente</p>
+    </div>
+</body>
+</html>

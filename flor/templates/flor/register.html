@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'inicio' %}" class="logo">
+            <span>FOLILA</span>
+            <img src="{% static 'images/icono2.png' %}" alt="Logo Folila">
+        </a>
+    </div>
+    <div class="register-container">
+        <h2>CREAR CUENTA</h2>
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Registrarse</button>
+        </form>
+        <a href="{% url 'login' %}" class="login-link">¿Ya tienes cuenta? Inicia sesión aquí</a>
+    </div>
+</body>
+</html>

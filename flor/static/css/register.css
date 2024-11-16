@@ -1,0 +1,101 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(to right, #61d8b0, #5bcda2, #409e6e, #2b7a40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+    margin-bottom: 3%;
+}
+.header .logo {
+    font-size: 5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.header .logo span {
+    margin-right: 10px;
+}
+.header .logo img {
+    width: 120px;
+    height: 120px;
+}
+
+.register-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(167, 167, 167, 0.1);
+    padding: 25px;
+    text-align: left;
+    max-width: 400px;
+    margin-top: -30px;
+}
+
+.register-container h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e4f17f;
+}
+
+.register-container label {
+    font-family: 'Roboto', sans-serif;
+    color: #e4f17f;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+    outline: none;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.register-container button[type="submit"] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    background-color: #28a745;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.register-container .helptext {
+    color: #e4f17f;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.login-link {
+    margin-top: 10px;
+    color: #e4f17f;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+}
+.login-link:hover {
+    text-decoration: underline;
+}
