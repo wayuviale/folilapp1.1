@@ -1,0 +1,43 @@
+.message {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+.message .close {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+.message .close:hover {
+    transform: scale(1.2);
+    color: #ffd1d1;
+}
+.message.error {
+    background-color: #F44336;
+    border-color: #D32F2F;
+    color: #FFFFFF;
+}
+.message.info {
+    background-color: #2196F3;
+    border-color: #1976D2;
+    color: #FFFFFF;
+}
+.message.warning {
+    background-color: #FF9800;
+    border-color: #F57C00;
+    color: #FFFFFF;
+}

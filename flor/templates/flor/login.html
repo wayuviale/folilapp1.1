@@ -3,27 +3,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/msg.css' %}">
 </head>
 <body>
-    <div class="header">
-        <a href="{% url 'inicio' %}" class="logo">
-            <img src="{% static 'images/icono2.png' %}" alt="Logo Folila">
-            <span class="logo-text">FOLILA</span>
-        </a>
-    </div>
-    <div class="login-container">
-        <h2>INICIAR SESIÓN</h2>
-        <form method="POST">
-            {% csrf_token %}
-            <label for="username">Nombre de usuario</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" class="login-btn">Ingresar</button>
-        </form>
-        <a href="{% url 'register' %}" class="register-link">¿No tienes una cuenta? Regístrate aquí</a>
+    {% include 'flor/msg.html' %}
+    <div class="sphere sphere-1"></div>
+    <div class="sphere sphere-2"></div>
+    <div class="sphere sphere-3"></div> 
+    <div class="container">
+        <header class="header">
+            <a href="/" class="logo-link">
+                <h1>FOLILA</h1>
+                <img src="{% static 'images/logo.png' %}" alt="FOLILA Logo" class="logo">
+            </a>
+        </header>        
+        <div class="main">
+            <div class="plant-container">
+                <img src="{% static 'images/plantam.png' %}" alt="Planta" class="plant">
+            </div>
+            <div class="form-container">
+                <form method="post" class="login-form">
+                    <h2>Inicio de sesión</h2>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">INICIAR SESIÓN</button>
+                </form>
+            </div>            
+        </div>
+        <footer>
+            <p class="footer-text">"EMPIEZA A IDENTIFICAR PLANTAS AHORA Y MEJORA TU ENTORNO."</p>
+        </footer>        
     </div>
 </body>
 </html>

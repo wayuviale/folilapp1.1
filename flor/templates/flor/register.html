@@ -3,24 +3,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
     <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/msg.css' %}">
 </head>
 <body>
-    <div class="header">
-        <a href="{% url 'inicio' %}" class="logo">
-            <span>FOLILA</span>
-            <img src="{% static 'images/icono2.png' %}" alt="Logo Folila">
-        </a>
-    </div>
-    <div class="register-container">
-        <h2>CREAR CUENTA</h2>
-        <form method="post" action="{% url 'register' %}">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Registrarse</button>
-        </form>
-        <a href="{% url 'login' %}" class="login-link">¿Ya tienes cuenta? Inicia sesión aquí</a>
+    {% include 'flor/msg.html' %}
+    <div class="sphere sphere-1"></div>
+    <div class="sphere sphere-2"></div>
+    <div class="sphere sphere-3"></div>
+    <div class="main-container">
+        <header class="header">
+            <a href="/" class="logo-link">
+                <h1>FOLILA</h1>
+                <img src="{% static 'images/logo.png' %}" alt="FOLILA Logo" class="logo">
+            </a>
+        </header>       
+        <div class="main">
+            <div class="plant-container">
+                <img src="{% static 'images/plantam.png' %}" alt="Planta" class="plant">
+            </div>
+            <div class="form-container">
+                <h2>CREAR CUENTA</h2>
+                <form action="/register/" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Registrarse</button>
+                </form>
+            </div>            
+        </div>
+        <footer>
+            <p class="footer-text">"EMPIEZA A IDENTIFICAR PLANTAS AHORA Y MEJORA TU ENTORNO."</p>
+        </footer>        
     </div>
 </body>
 </html>

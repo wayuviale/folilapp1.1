@@ -1,0 +1,19 @@
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                <span>{{ message }}</span>
+                <button class="close" onclick="closeMessage(this)">&times;</button>
+            </div>
+        {% endfor %}
+    </div>
+    <script>
+        function closeMessage(button) {
+            const message = button.parentElement;
+            message.style.opacity = '0';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 300);
+        }
+    </script>
+{% endif %}

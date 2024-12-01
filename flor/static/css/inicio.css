@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(to right, #61d8b0, #61d8b0,#5bcda2, #409e6e, #2b7a40)
 }
 .inicio-container {
     background: transparent;
@@ -30,14 +31,15 @@ body {
     left: 5%;
     font-size: 10rem;
 }
-
 .iconos {
-    position: absolute;
-    top: 25%;
-    left: 15%;
     margin-top: 3%;
     display: flex;
-    gap: 20px
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 12%;
+    left: 12%;
 }
 
 .iconos img {

@@ -3,8 +3,10 @@ from .forms import UserRegisterForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate, login
+from .forms import CustomAuthenticationForm
+from django.views.decorators.cache import cache_control
 
 def inicio(request):
     return render(request, 'flor/inicio.html')
@@ -13,18 +15,21 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            print(form.cleaned_data)
             form.save()
-            messages.success(request, 'Cuenta creada exitosamente.')
+            messages.success(request, '¡Cuenta creada con éxito! Por favor, inicia sesión.')
             return redirect('login')
         else:
-            messages.error(request, 'Por favor, corrige los errores.')
+            print(form.errors) 
+            messages.error(request, 'Hubo un error al crear la cuenta. Por favor, verifica los datos e inténtalo nuevamente.')
     else:
         form = UserRegisterForm()
     return render(request, 'flor/register.html', {'form': form})
+from .forms import CustomAuthenticationForm
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
+        form = CustomAuthenticationForm(data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
@@ -33,17 +38,22 @@ def login_view(request):
                 login(request, user)
                 return redirect('dashboard')
             else:
-                messages.error(request, 'Nombre de usuario o contraseña incorrectos.')
+                messages.error(request, "Nombre de usuario o contraseña incorrectos.")
         else:
-            messages.error(request, 'Por favor, revisa tus credenciales.')
+            messages.error(request, "Por favor, revisa tus credenciales.")
     else:
-        form = AuthenticationForm()
-
+        form = CustomAuthenticationForm()
     return render(request, 'flor/login.html', {'form': form})
 
 @login_required
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
+def logout_view(request):
+    logout(request)
+    messages.success(request, "¡Has cerrado sesión exitosamente!")
+    return redirect('inicio')
+
 def dashboard(request):
-    return render(request, 'flor/dashboard.html')
+    return render(request, 'flor/dashboard.html', {'display_messages': True})
 
 def perfil(request):
     plantas_favoritas = []

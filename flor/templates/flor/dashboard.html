@@ -1,11 +1,199 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
 </head>
 <body>
-    <h2>Bienvenido, {{ user.username }}!</h2>
-    <p>Este es el panel de control de tu cuenta en Folila.</p>
+    {% if user.is_authenticated %}
+      <div id="welcome-message" class="toast">
+        ¡Bienvenido, {{ user.username }}!
+      </div>
+    {% else %}
+      <script>
+        window.location.href = "{% url 'login' %}";
+      </script>
+    {% endif %}
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo Folila">
+            <span>FOLILA</span>
+        </div>
+        <div class="nav-buttons">
+            <button id="inicio-btn" class="nav-btn" onclick="scrollToSection('inicio')">Inicio</button>
+            <button id="general-btn" class="nav-btn" onclick="scrollToSection('general')">General</button>
+            <form method="POST" action="{% url 'logout' %}">
+              {% csrf_token %}
+              <button type="submit" class="logout-button">Cerrar sesión</button>
+            </form>
+        </div>
+    </nav>
+    <section id="inicio" class="section-banner">
+        <div class="banner-content">
+            <div class="overlay">
+                <h1>“Identifica y protege las plantas que transforman tu hogar y el planeta”.</h1>
+            </div>
+        </div>
+    </section>
+    <section id="general" class="section-plantas">
+        <div class="title-container">
+            <h2 class="animate-title">Plantas</h2>
+        </div>
+        <div class="plants-grid">
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Lirio de la paz</p>
+              <p class="plant-subtitle">(Peace Lily - Spathiphyllum)</p>
+            </div>
+            <img src="{% static 'images/plant_1.png' %}" alt="Lirio de la paz">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Helechos</p>
+              <p class="plant-subtitle">(Ferns - Tracheophyta)</p>
+            </div>
+            <img src="{% static 'images/plant_2.png' %}" alt="Helechos">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Planta<br>Araña</p>
+              <p class="plant-subtitle">(Spider Plant -<br> Chlorophytum <br>comosum)</p>
+            </div>
+            <img src="{% static 'images/plant_3.png' %}" alt="Planta Araña">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Sansevieria</p>
+              <p class="plant-subtitle">(Snake plant - Sansevieria trifasciata)</p>
+            </div>
+            <img src="{% static 'images/plant_4.png' %}" alt="Sansevieria">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Orquídeas</p>
+              <p class="plant-subtitle">(Orchids - Orchidaceae)</p>
+            </div>
+            <img src="{% static 'images/plant_5.png' %}" alt="Orquídeas">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Palma Kentia</p>
+              <p class="plant-subtitle">(Kentia Palm -<br> Howea forsteriana)</p>
+            </div>
+            <img src="{% static 'images/plant_6.png' %}" alt="Palma Kentia">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Margarita del Transvaal</p>
+              <p class="plant-subtitle">(Transvaal Daisy - Gerbera)</p>
+            </div>
+            <img src="{% static 'images/plant_1.png' %}" alt="Margarita del Transvaal">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Fitoplancton</p>
+              <p class="plant-subtitle">(phytoplankton)</p>
+            </div>
+            <img src="{% static 'images/plant_2.png' %}" alt="Fitoplancton">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Poto - <br> Potus</p>
+              <p class="plant-subtitle">(Golden Pothos - <br> Epipremnum aureum)</p>
+            </div>
+            <img src="{% static 'images/plant_3.png' %}" alt="Poto">
+          </a>
+          <a href="#" class="plant-card">
+            <div class="plant-text">
+              <p class="plant-title">Ficus Benjamina</p>
+              <p class="plant-subtitle">/</p>
+            </div>
+            <img src="{% static 'images/plant_4.png' %}" alt="Ficus Benjamina">
+          </a>
+        </div>
+    </section>
+    <section id="about" class="section-about">
+      <h2 class="animate-title">Información Extra</h2>
+      <div class="about-grid">
+        <a href="#" class="about-card">
+            <img src="{% static 'images/fi.png' %}" alt="Favoritas">
+            <div class="card-content">
+                <p>Favoritas</p>
+            </div>
+        </a>
+        <a href="#" class="about-card">
+            <img src="{% static 'images/pi.png' %}" alt="¿Quiénes somos?">
+            <div class="card-content">
+                <p>¿Quiénes somos?</p>
+            </div>
+        </a>
+        <a href="#" class="about-card">
+            <img src="{% static 'images/ii1.png' %}" alt="Importancia">
+            <div class="card-content">
+                <p>Importancia</p>
+            </div>
+        </a>
+    </div>
+    </section>
+    <script>
+        function scrollToSection(sectionId) {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+    
+        function setActiveButton() {
+          const sections = document.querySelectorAll("section");
+          const buttons = document.querySelectorAll(".nav-btn");
+    
+          let activeSection = null;
+
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+              activeSection = section.id;
+            }
+          });
+
+          buttons.forEach((button) => {
+            button.classList.remove("active");
+            if (button.id.includes(activeSection)) {
+              button.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", setActiveButton);
+      </script>
+      <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        });
+        const animateTitle = document.querySelectorAll(".animate-title");
+        animateTitle.forEach((el) => observer.observe(el));
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toast = document.getElementById('welcome-message');
+            if (toast) {
+                setTimeout(() => {
+                    toast.classList.add('hide');
+                    setTimeout(() => {
+                        toast.remove();
+                    }, 500);
+                }, 3000);
+            }
+        });
+    </script>
 </body>
 </html>
