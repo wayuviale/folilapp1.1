@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aboutas</title>
+    <link rel="stylesheet" href="{% static 'css/aboutas.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo2.png' %}" alt="logo" id="logo2">
+        <div id="container-header">
+             <a href="{% url 'dashboard' %}">INICIO</a>
+             <a href="{% url 'dashboard' %}" style="font-weight:700">GENERAL</a>
+        </div>
+    </header>
+    <section id="about-us">
+        <div class="about-header">
+            <h1>¿Quiénes somos?</h1>
+            <p>Somos un equipo apasionado por conectar a las personas con el poder de la naturaleza. Exploramos, investigamos y compartimos conocimiento sobre las plantas para transformar tu entorno en un espacio más verde y saludable.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="Trabajo en equipo">
+                <h2>Nuestra misión</h2>
+                <p>Inspirar y educar sobre el impacto positivo de las plantas en el bienestar personal y ambiental.</p>
+            </div>
+            <div class="about-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="Visión">
+                <h2>Nuestra visión</h2>
+                <p>Crear un mundo más verde donde cada hogar sea un refugio natural.</p>
+            </div>
+            <div class="about-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="Valores">
+                <h2>Nuestros valores</h2>
+                <p>Sostenibilidad, educación, innovación y amor por la naturaleza.</p>
+            </div>
+        </div>
+    </section>
+    <main>
+    <section id="integrantes" class="section-integrantes">
+        <div class="about-header">
+            <h1>Conoce al Equipo</h1>
+        </div>
+        <div class="integrantes-container">
+            <div class="integrante-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="int1">
+                <div class="nombre">Insertar Nombre</div>
+                <div class="social-buttons">
+                    <button class="social-button facebook" onclick="window.location.href='#'">Facebook</button>
+                    <button class="social-button twitter" onclick="window.location.href='#'">Twitter</button>
+                    <button class="social-button instagram" onclick="window.location.href='#'">Instagram</button>
+                    <button class="social-button linkedin" onclick="window.location.href='#'">LinkedIn</button>
+                </div>
+            </div>
+            <div class="integrante-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="int2">
+                <div class="nombre">Insertar Nombre</div>
+                <div class="social-buttons">
+                    <button class="social-button facebook" onclick="window.location.href='#'">Facebook</button>
+                    <button class="social-button twitter" onclick="window.location.href='#'">Twitter</button>
+                    <button class="social-button instagram" onclick="window.location.href='#'">Instagram</button>
+                    <button class="social-button linkedin" onclick="window.location.href='#'">LinkedIn</button>
+                </div>
+            </div>
+            <div class="integrante-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="int3">
+                <div class="nombre">Insertar Nombre</div>
+                <div class="social-buttons">
+                    <button class="social-button facebook" onclick="window.location.href='#'">Facebook</button>
+                    <button class="social-button twitter" onclick="window.location.href='#'">Twitter</button>
+                    <button class="social-button instagram" onclick="window.location.href='#'">Instagram</button>
+                    <button class="social-button linkedin"" onclick="window.location.href='#'">LinkedIn</button>
+                </div>
+            </div>
+            <div class="integrante-card">
+                <img src="{%static 'images/sansevieria.png'%}" alt="int4">
+                <div class="nombre">Insertar Nombre</div>
+                <div class="social-buttons">
+                    <button class="social-button facebook" onclick="window.location.href='#'">Facebook</button>
+                    <button class="social-button twitter" onclick="window.location.href='#'">Twitter</button>
+                    <button class="social-button instagram" onclick="window.location.href='#'">Instagram</button>
+                    <button class="social-button linkedin" onclick="window.location.href='#'">LinkedIn</button>
+                </div>
+            </div>
+            <div class="integrante-card">
+                <img src="{%static 'images/orquidea.png'%}" alt="int5">
+                <div class="nombre">Mario Anaya</div>
+                <div class="social-buttons">
+                    <button class="social-button facebook" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Facebook</button>
+                    <button class="social-button twitter" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Twitter</button>
+                    <button class="social-button instagram" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">Instagram</button>
+                    <button class="social-button linkedin" onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">LinkedIn</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+</body>
+</html>

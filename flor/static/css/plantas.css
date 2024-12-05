@@ -1,0 +1,119 @@
+/*header elements*/
+header{
+    align-self:center;
+    width: 101vw;
+    position: fixed;
+    display: flex;
+    background-color: #80d1b2;
+    justify-content: space-between;
+    margin-left:-0.5vw;
+    margin-top:-2vh;
+    padding: 7px 0;
+    align-items: center; /*centers the elements vertically*/
+    font-family: Arial, Helvetica, sans-serif;
+    z-index:1000;
+}
+
+#logo2 {
+    width:auto;
+    height:auto; /*height adjusts based on its width*/
+    margin-left:50px;
+    max-height:100px;
+}
+
+#container-header { /*container for the links in the header*/
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5vw;
+    margin-top: 0.4%;
+    align-items: center; /*centers the anchors (links) on the container*/
+    gap: 20px; /*establishes the gap between the anchors*/
+    padding:17px 35px;
+}
+
+#container-header a {
+    text-decoration: none;
+    color:#1c4f38;
+}
+
+/*portrait*/
+.title{
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 15vw;
+    font-family: "Playfair Display", serif;
+    font-weight:500;
+    margin-left:8vw;
+    text-transform:uppercase;
+}
+.quick_description{
+    font-size: 20px;
+    background-color:white;
+    padding:40px;
+    border-radius: 50px;
+    width:400px;
+    line-height:1.7;
+    font-family: "Poppins", sans-serif;
+    font-weight:500;
+}
+
+body {
+    background-color:#d4f4d9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*detailed descriptions*/
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding:  15vh 50px;
+    align-items: center;
+}
+
+p {
+    color:#1c4f38;
+    text-align:center;
+    font-family: "Poppins",serif;
+    font-size:205%;
+    letter-spacing:5px;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    text-transform:uppercase;
+}
+
+.container_description h2 {
+    color:#1c4f38;
+    text-align:center;
+    font-family: "Playfair Display", serif;
+    font-weight:1000;
+}
+
+.container_description {
+    width:20vw;
+}
+
+.description {
+    font-size:100%;
+    background-color: white;
+    border-radius:20px;
+    padding:20px;
+    line-height:1.5;
+    font-weight:500;
+    font-family: "Poppins", sans-serif;
+}
+
+.descriptions {
+    display:flex;
+    justify-content: space-between;
+}

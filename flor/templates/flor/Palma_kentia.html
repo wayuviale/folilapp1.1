@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'css/plantas.css'%}"> <!--cambiar el href a {%static 'css/plantas.css'%}-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Palma Kentia | Folilapp</title>
+    </head>
+    <body>
+        <header>
+               <img src="{% static 'images/logo2.png' %}" alt="logo" id="logo2"> <!--cambiar el src a {%static 'img/logo2.png'%}-->
+               <div id="container-header">
+                    <a href="{% url 'dashboard' %}">INICIO</a>
+                    <a href="{% url 'dashboard' %}" style="font-weight:700">GENERAL</a>
+               </div>
+        </header>
+        </div>
+        <div class="container">
+            <div class="title" style="transform:translateX(-8vw)">Palma Kentia </div>
+            <img src="{%static 'images/3.png'%}" alt="Imagen de Palma Kentia" style="height:490px;width:auto;">
+            <div class="quick_description"> Es originaria de la Isla Lord Howe, en Australia, y es conocida por su elegancia y  <b>facilidad de cuidado</b> . Es una planta versátil para interiores y exteriores. Requiere riego <b>2 veces a la semana</b> en verano y es recomendable humedecer sus hojas.</div>
+        </div>
+        <hr color="#1c4f38">
+        <p>Palma Kentia - Kentia Palm (Howea forsteriana)</p>
+
+        <div class="descriptions">
+            <div class="container_description">
+                <h2>• Altura y ancho</h2>
+                <div class="description">
+                    En interiores, puede alcanzar de 2 a 3 metros y en exteriores, puede crecer hasta 10-12 metros con el tiempo. Con respecto a su ancho las hojas pueden extenderse hasta 2-3 metros en ejemplares maduros. El crecimiento es lento, por lo que es ideal para espacios interiores.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:30vh;">
+                <h2>• Precauciones</h2>
+                <div class="description">
+                    Es susceptible a enfermedades como hongos y plagas como la cochinilla algodonosa y la araña roja. Sus hojas tienen puntas puntiagudas, pero no son peligrosas.
+                    Puede acumular polvo en sus hojas, lo que podría afectar a personas con alergias si no se limpia regularmente.
+                    La palma Kentia no es tóxica para mascotas ni humanos, lo que la hace segura para hogares con niños o animales.
+                </div> 
+            </div>
+
+            <div class="container_description">
+                <h2>• Problemas comunes</h2>
+                <div class="description">
+                    Las puntas marrones en las hojas suelen aparecer por baja humedad, riego insuficiente o acumulación de sales en el sustrato. Por otro lado, las hojas amarillas pueden ser un signo de riego excesivo o deficiencia de nutrientes. El crecimiento lento es otro problema frecuente, generalmente causado por una iluminación insuficiente o falta de fertilización. Además, la planta puede ser susceptible a plagas como cochinillas, ácaros y pulgones, que debilitan sus hojas si no se controlan a tiempo.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:15vh;">
+                <h2>• Cuidados</h2>
+                <div class="description">
+                    Es fundamental ubicarla en un lugar con luz indirecta brillante, evitando la exposición prolongada al sol directo, que podría dañar sus hojas. 
+                    El riego debe ser moderado, permitiendo que la capa superior del sustrato se seque entre riegos para evitar el encharcamiento y la podredumbre de raíces. Además, esta planta aprecia niveles moderados de humedad, por lo que es recomendable usar un humidificador o agruparla con otras plantas si el ambiente es muy seco.
+                </div> 
+            </div>
+        </div>
+        <br><br>
+    </body>

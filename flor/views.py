@@ -57,7 +57,37 @@ def dashboard(request):
 
 def perfil(request):
     plantas_favoritas = []
-    return render(request, 'perfil.html', {'plantas_favoritas': plantas_favoritas})
+    return render(request, 'flor/perfil.html', {'plantas_favoritas': plantas_favoritas})
 
 def ayuda(request):
     return render(request, 'flor/ayuda.html')
+
+def cinta(request):
+    return render(request, 'flor/cinta.html')
+
+def helecho(request):
+    return render(request, 'flor/helecho.html')
+
+def lirio(request):
+    return render(request, 'flor/lirio_de_la_paz.html')
+
+def gerbera(request):
+    return render(request, 'flor/gerberas.html')
+
+def ficus(request):
+    return render(request, 'flor/ficus_benjamina.html')
+
+def palma(request):
+    return render(request, 'flor/Palma_kentia.html')
+
+def sanse(request):
+    return render(request, 'flor/sanse.html')
+
+def orqui(request):
+    return render(request, 'flor/orqui.html')
+
+def poto(request):
+    return render(request, 'flor/poto.html')
+
+def aboutas(request):
+    return render(request, 'flor/aboutas.html')

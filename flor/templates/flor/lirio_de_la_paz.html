@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'css/plantas.css'%}"> <!--cambiar el href a {%static 'css/plantas.css'%}-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Lirio de la Paz | Folilapp</title>
+    </head>
+    <body>
+        <header>
+               <img src="{% static 'images/logo2.png' %}" alt="logo" id="logo2"> <!--cambiar el src a {%static 'img/logo2.png'%}-->
+               <div id="container-header">
+                    <a href="{% url 'dashboard' %}">INICIO</a>
+                    <a href="{% url 'dashboard' %}" style="font-weight:700">GENERAL</a>
+               </div>
+        </header>
+        </div>
+        <div class="container">
+            <div class="title">Lirio de la paz</div>
+            <img src="{%static 'images/lirio_de_la_paz.png'%}" alt="Imagen de un lirio de la paz" style="height:500px;width:auto;">
+            <div class="quick_description">Planta con gran follaje y ostentosas flores blancas, perfecta para tener en espacios exteriores. Se considera una de las plantas que más oxigenan al medio ambiente. Florece con poca luz y es fácil de mantener, lo que la convierte en una planta destacada para el hogar.</div>
+        </div>
+        <hr color="#1c4f38">
+        <p>Lirio de la paz - peace lily (SPATHIPHYLLUM)</p>
+
+        <div class="descriptions">
+            <div class="container_description">
+                <h2>• Altura y ancho</h2>
+                <div class="description">Entre 30 a 120
+                    centímetros de largo y
+                    ancho, aunque algunas
+                    pueden alcanzar hasta los
+                    180 centímetros.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:30vh;">
+                <h2>• Precauciones</h2>
+                <div class="description">La planta contiene
+                    cristales de oxalato de
+                    calcio en sus células, que
+                    pueden ser dañinos para
+                    mascotas y niños si se
+                    ingieren. Los principales
+                    efectos son ardor en la
+                    boca, garganta y lengua.
+                </div> 
+            </div>
+
+            <div class="container_description">
+                <h2>• Problemas comunes</h2>
+                <div class="description">Deficiencia de magnesio: Puede
+                    atrofiar la planta, dejando sus
+                    hojas amarillas pero
+                    manteniendo los tubos
+                    vasculares verdes.
+                    <br><br>
+                    Sobre fertilización y
+                    deshidratación: Perjudican la
+                    planta, causando que los
+                    extremos de las hojas se tornen
+                    marrones.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:15vh;">
+                <h2>• Cuidados</h2>
+                <div class="description">La planta necesita poco
+                    fertilizante. Se recomienda
+                    usar un fertilizante líquido
+                    balanceado como el 20-20-20
+                    cada 6 a 8 semanas durante la
+                    primavera y verano. Al
+                    mezclarlo con agua, usa solo ¼
+                    de la porción recomendada por
+                    el envase.
+                    <br><br>
+                    Las hojas acumulan polvo, por
+                    lo que es aconsejable
+                    limpiarlas con un paño
+                    húmedo de vez
+                </div> 
+            </div>
+        </div>
+        <br><br>
+    </body>

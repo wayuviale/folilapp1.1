@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{%static 'css/plantas.css'%}"> <!--cambiar el href a {%static 'css/plantas.css'%}-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Gerberas | Folilapp</title>
+    </head>
+    <body>
+        <header>
+               <img src="{% static 'images/logo2.png' %}" alt="logo" id="logo2"> <!--cambiar el src a {%static 'img/logo2.png'%}-->
+               <div id="container-header">
+                    <a href="{% url 'dashboard' %}">INICIO</a>
+                    <a href="{% url 'dashboard' %}" style="font-weight:700">GENERAL</a>
+               </div>
+        </header>
+        </div>
+        <div class="container">
+            <div class="title" style="transform:translateX(-10vw)">Gerberas</div>
+            <img src="{%static 'images/Gerberas.png'%}" alt="Imagen de una gerbera" style="height:450px;width:auto;transform:translateX(4vw)">
+            <div class="quick_description">Planta con flores brillantes en colores como amarillo, naranja, blanco y rojo, que purifican el aire y <b>eliminan contaminantes</b> comunes del hogar.</div>
+        </div>
+        <hr color="#1c4f38">
+        <p>Gerberas/Margarita del Transvaal - Transvaal Daisy (Gerbera)</p>
+
+        <div class="descriptions">
+            <div class="container_description">
+                <h2>• Altura y ancho</h2>
+                <div class="description">
+                    Las flores pueden medir entre 7 y 12 cm de diámetro, con tallos robustos de hasta 60 cm de altura.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:30vh;">
+                <h2>• Precauciones</h2>
+                <div class="description">
+                    No son tóxicas, pero el consumo puede causar malestar digestivo. Evitar el contacto prolongado con el polen.
+                </div> 
+            </div>
+
+            <div class="container_description">
+                <h2>• Problemas comunes</h2>
+                <div class="description">
+                    Plagas: pueden presentarse arañas rojas, moscas blancas. Tratar con insecticidas específicos.
+                    <br><br>
+                    Por lo general no se presentan muchos problemas.
+                </div>
+            </div>
+
+            <div class="container_description" style="margin-top:15vh;">
+                <h2>• Cuidados</h2>
+                <div class="description">
+                Se debe mantener la tierra húmeda pero no encharcada, es decir con buen drenaje. 
+                <br><br>
+                Es recomendado dejarla en un lugar con luz directa del sol.
+                </div> 
+            </div>
+        </div>
+        <br><br>
+    </body>

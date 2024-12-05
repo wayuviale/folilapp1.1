@@ -23,8 +23,9 @@
             <span>FOLILA</span>
         </div>
         <div class="nav-buttons">
-            <button id="inicio-btn" class="nav-btn" onclick="scrollToSection('inicio')">Inicio</button>
-            <button id="general-btn" class="nav-btn" onclick="scrollToSection('general')">General</button>
+            <button id="general-btn" class="nav-btn" onclick="scrollToSection('general')">Inicio</button>
+            <button id="about-btn" class="nav-btn" onclick="scrollToSection('about')">Información Extra
+            </button>
             <form method="POST" action="{% url 'logout' %}">
               {% csrf_token %}
               <button type="submit" class="logout-button">Cerrar sesión</button>
@@ -43,101 +44,84 @@
             <h2 class="animate-title">Plantas</h2>
         </div>
         <div class="plants-grid">
-          <a href="#" class="plant-card">
+          <a href="{% url 'lirio' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Lirio de la paz</p>
               <p class="plant-subtitle">(Peace Lily - Spathiphyllum)</p>
             </div>
-            <img src="{% static 'images/plant_1.png' %}" alt="Lirio de la paz">
+            <img src="{% static 'images/lirio_de_la_paz.png' %}" alt="Lirio de la paz">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'helecho' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Helechos</p>
               <p class="plant-subtitle">(Ferns - Tracheophyta)</p>
             </div>
-            <img src="{% static 'images/plant_2.png' %}" alt="Helechos">
+            <img src="{% static 'images/helecho.png' %}" alt="Helechos">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'cinta' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Planta<br>Araña</p>
               <p class="plant-subtitle">(Spider Plant -<br> Chlorophytum <br>comosum)</p>
             </div>
-            <img src="{% static 'images/plant_3.png' %}" alt="Planta Araña">
+            <img src="{% static 'images/cinta.png' %}" alt="Planta Araña">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'sanse' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Sansevieria</p>
               <p class="plant-subtitle">(Snake plant - Sansevieria trifasciata)</p>
             </div>
-            <img src="{% static 'images/plant_4.png' %}" alt="Sansevieria">
+            <img src="{% static 'images/sansevieria.png' %}" alt="Sansevieria">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'orqui' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Orquídeas</p>
               <p class="plant-subtitle">(Orchids - Orchidaceae)</p>
             </div>
-            <img src="{% static 'images/plant_5.png' %}" alt="Orquídeas">
+            <img src="{% static 'images/orquidea.png' %}" alt="Orquídeas">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'palma' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Palma Kentia</p>
               <p class="plant-subtitle">(Kentia Palm -<br> Howea forsteriana)</p>
             </div>
-            <img src="{% static 'images/plant_6.png' %}" alt="Palma Kentia">
+            <img src="{% static 'images/3.png' %}" alt="Palma Kentia">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'gerbera' %}" class="plant-card">
             <div class="plant-text">
-              <p class="plant-title">Margarita del Transvaal</p>
+              <p class="plant-title">Margarita <br> del <br>Transvaal</p>
               <p class="plant-subtitle">(Transvaal Daisy - Gerbera)</p>
             </div>
-            <img src="{% static 'images/plant_1.png' %}" alt="Margarita del Transvaal">
+            <img src="{% static 'images/gerberas.png' %}" alt="Margarita del Transvaal">
           </a>
-          <a href="#" class="plant-card">
-            <div class="plant-text">
-              <p class="plant-title">Fitoplancton</p>
-              <p class="plant-subtitle">(phytoplankton)</p>
-            </div>
-            <img src="{% static 'images/plant_2.png' %}" alt="Fitoplancton">
-          </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'poto' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Poto - <br> Potus</p>
               <p class="plant-subtitle">(Golden Pothos - <br> Epipremnum aureum)</p>
             </div>
-            <img src="{% static 'images/plant_3.png' %}" alt="Poto">
+            <img src="{% static 'images/pothos.png' %}" alt="Poto">
           </a>
-          <a href="#" class="plant-card">
+          <a href="{% url 'ficus' %}" class="plant-card">
             <div class="plant-text">
               <p class="plant-title">Ficus Benjamina</p>
               <p class="plant-subtitle">/</p>
             </div>
-            <img src="{% static 'images/plant_4.png' %}" alt="Ficus Benjamina">
+            <img src="{% static 'images/ficus_benjamina.png' %}" alt="Ficus Benjamina">
           </a>
         </div>
     </section>
+
     <section id="about" class="section-about">
-      <h2 class="animate-title">Información Extra</h2>
-      <div class="about-grid">
-        <a href="#" class="about-card">
-            <img src="{% static 'images/fi.png' %}" alt="Favoritas">
-            <div class="card-content">
-                <p>Favoritas</p>
-            </div>
+      <div class="about-header">
+        <h2 class="animate-title">Información Extra</h2>
+      </div>
+      <div class="about-content">
+        <a href="{% url 'aboutas' %}" class="about-card">
+          <img src="{% static 'images/pi.png' %}" alt="¿Quiénes somos?">
+          <p>¿Quiénes somos?</p>
         </a>
-        <a href="#" class="about-card">
-            <img src="{% static 'images/pi.png' %}" alt="¿Quiénes somos?">
-            <div class="card-content">
-                <p>¿Quiénes somos?</p>
-            </div>
-        </a>
-        <a href="#" class="about-card">
-            <img src="{% static 'images/ii1.png' %}" alt="Importancia">
-            <div class="card-content">
-                <p>Importancia</p>
-            </div>
-        </a>
-    </div>
+      </div>
     </section>
+
     <script>
         function scrollToSection(sectionId) {
           const section = document.getElementById(sectionId);
@@ -145,11 +129,9 @@
             section.scrollIntoView({ behavior: 'smooth' });
           }
         }
-    
         function setActiveButton() {
           const sections = document.querySelectorAll("section");
           const buttons = document.querySelectorAll(".nav-btn");
-    
           let activeSection = null;
 
           sections.forEach((section) => {
@@ -158,7 +140,6 @@
               activeSection = section.id;
             }
           });
-
           buttons.forEach((button) => {
             button.classList.remove("active");
             if (button.id.includes(activeSection)) {
@@ -166,7 +147,6 @@
             }
           });
         }
-
         window.addEventListener("scroll", setActiveButton);
       </script>
       <script>
